@@ -1,7 +1,7 @@
 {
-  "name": "electron-quick-start",
+  "name": "electron-feedly",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A minimal Electron application to run feedly",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
@@ -9,13 +9,11 @@
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "feedly",
+    "RSS"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Nizar",
+  "license": "LGPL",
   "devDependencies": {
     "electron": "^6.0.11"
   }
