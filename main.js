@@ -5,23 +5,27 @@ const path = require('path')
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
-
+const urls = [
+  "https://feedly.com/i/my"
+]
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    center:true,
+    resizable:true, 
+    icon : path.join(__dirname, 'Feedly-logo.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
   })
-
+  mainWindow.maximize();
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  //mainWindow.loadFile('index.html')
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
-
+  //mainWindow.webContents.openDevTools()
+  console.log(urls[0]);
+  mainWindow.loadURL(urls[0]);
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
     // Dereference the window object, usually you would store windows
